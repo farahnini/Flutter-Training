@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
    return ResponsiveSizer(builder: (context,orientation,screenType){
        return GetMaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'SPS',
+        title: 'Training',
         theme: ThemeData(
           
           // This is the theme of your application.
