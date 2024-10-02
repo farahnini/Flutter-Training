@@ -18,6 +18,8 @@ class SharedpreferencesUtils {
 
   String get getStorageUserPlayerId => storageUtils.getString('user_playerId').toString();
 
+  String get getStorageDevice => storageUtils.getString('device').toString();
+
   set setSharedPrefsToken(String value){
     storageUtils.setString('user_token', value);
   }
@@ -33,6 +35,10 @@ class SharedpreferencesUtils {
   // Ambil user punya subcription ID
   set setSharedUserPlayerId(String value){
     storageUtils.setString('user_playerId', value);
+  }
+
+  set setSharedPrefsDevice(String value) {
+    storageUtils.setString('device', value);
   }
 
   clearStorage(){

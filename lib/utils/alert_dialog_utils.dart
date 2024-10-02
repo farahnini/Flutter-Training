@@ -1,3 +1,4 @@
+import 'package:app_settings/app_settings.dart';
 import 'package:flutter/material.dart';
 
 class PopUpDialog{
@@ -35,8 +36,24 @@ class PopUpDialog{
                 ),
               ),
             ),
+            TextButton(
+              style: TextButton.styleFrom(
+                side: const BorderSide(),
+                padding: const EdgeInsets.symmetric(horizontal: 15),
+                backgroundColor: Colors.pink,
+              ),
+              onPressed: () {
+                AppSettings.openAppSettings();
+              },
+              child: const Text(
+                'Go to Settings',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+            ),
           ]
-
         );
       },
     );

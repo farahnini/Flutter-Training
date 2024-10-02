@@ -44,6 +44,9 @@ dependencies:
   circular_bottom_navigation: ^2.4.0
   onesignal_flutter: ^3.5.0
   app_settings: ^5.1.1
+  permission_handler: ^11.3.1
+  device_info_plus: ^10.1.2
+  
 
 dev_dependencies:
   flutter_test:

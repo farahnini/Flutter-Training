@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
-import 'package:sps/screens/home_screen.dart';
 import 'package:sps/screens/loading_screen.dart';
 import 'package:sps/utils/sharedpreferences_utils.dart';
 

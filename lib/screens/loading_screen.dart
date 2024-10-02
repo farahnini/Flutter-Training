@@ -23,7 +23,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
     Future.delayed(const Duration(seconds: 3), (){
       if (storageUtils.getStorageToken.isNotEmpty){
        // get to HomeScreen
-        Get.to(() => HomeScreen());
+        Get.offAll(() => HomeScreen());
 
       } else {
         Get.to(() => LoginScreen());
