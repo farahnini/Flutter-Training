@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:onesignal_flutter/onesignal_flutter.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:sps/screens/login_screen.dart';
+import 'package:sps/utils/sharedpreferences_utils.dart';
 
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  SharedpreferencesUtils().init();
+  OneSignal.shared.setAppId("2c9a02d4-cc6c-4f96-8286-c7ab6df7f167");
   runApp(const MyApp());
 }
 
@@ -14,8 +19,8 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-   return ResponsiveSizer(builder: (context,orientation,screenType){
-       return GetMaterialApp(
+  return ResponsiveSizer(builder: (context,orientation,screenType){
+      return GetMaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Training',
         theme: ThemeData(
