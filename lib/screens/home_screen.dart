@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:onesignal_flutter/onesignal_flutter.dart';
 import 'package:sps/screens/loading_screen.dart';
+import 'package:sps/screens/notifications/futurebuilder/index_notification.dart';
+import 'package:sps/screens/notifications/streambuilder/index_notification.dart';
 import 'package:sps/utils/check_permission_utils.dart';
 import 'package:sps/utils/one_signal_utils.dart';
 import 'package:sps/utils/sharedpreferences_utils.dart';
@@ -91,6 +93,69 @@ class _HomeScreenState extends State<HomeScreen> {
             // Text('User Token: ${storageUtils.getStorageToken}'),
             // Text('User Name: ${storageUtils.getStorageUserName}'),
             // Text('User Uuid: ${storageUtils.getStorageUserUuid}'),
+            ElevatedButton(
+                onPressed: () {
+                  Get.to(() => IndexNotificationScreenSB());
+                }, 
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.purple,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                ),
+                // icon
+                child: Row(
+                  children: [
+                    // icon
+                    const Icon(Icons.notifications,
+                    color: Colors.white,
+                    ),
+                    // space
+                    const SizedBox(width: 10),
+                    const Text(
+                    'Notification (Stream Builder)',
+                    style: TextStyle(
+                      fontSize: 15,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                    ),
+                                  ),
+                  ],
+                )
+            ),
+            
+            ElevatedButton(
+              onPressed: () {
+                Get.to(() => IndexNotificationScreenFB());
+              },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.blue,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+              // icon
+              child: Row(
+                children: [
+                  // icon
+                  const Icon(
+                    Icons.notifications,
+                    color: Colors.white,
+                  ),
+                  // space
+                  const SizedBox(width: 10),
+                  const Text(
+                    'Notification (Future Builder)',
+                    style: TextStyle(
+                      fontSize: 15,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              )
+            ),
+            const SizedBox(height: 20),
             Container(
               decoration: BoxDecoration(
                   gradient: LinearGradient(

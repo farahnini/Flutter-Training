@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:sps/api_service.dart';
+import 'package:sps/data/api_service.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
