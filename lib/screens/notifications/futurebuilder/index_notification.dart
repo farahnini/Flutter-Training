@@ -21,9 +21,6 @@ class _IndexNotificationScreenFBState extends State<IndexNotificationScreenFB> {
     indexNotifcations = ApiService().fetchIndexNotifications();
   }
 
-  
-  
-
  @override
   Widget build(BuildContext context) {
 

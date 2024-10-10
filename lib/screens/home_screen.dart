@@ -4,9 +4,11 @@ import 'package:device_info_plus/device_info_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:onesignal_flutter/onesignal_flutter.dart';
+import 'package:sps/screens/inapp_webview_screen.dart';
 import 'package:sps/screens/loading_screen.dart';
 import 'package:sps/screens/notifications/futurebuilder/index_notification.dart';
 import 'package:sps/screens/notifications/streambuilder/index_notification.dart';
+import 'package:sps/screens/webview_screen.dart';
 import 'package:sps/utils/check_permission_utils.dart';
 import 'package:sps/utils/one_signal_utils.dart';
 import 'package:sps/utils/sharedpreferences_utils.dart';
@@ -155,6 +157,64 @@ class _HomeScreenState extends State<HomeScreen> {
                 ],
               )
             ),
+
+            ElevatedButton(
+                    onPressed: () {
+                      Get.to(() => InAppWebViewScreen());
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.orange,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                    ),
+                    // icon
+                    child: Row(
+                      children: [
+                        // icon
+                        const Icon(
+                          Icons.web,
+                        ),
+                        // space
+                        const SizedBox(width: 10),
+                        const Text(
+                          'In app webview',
+                          style: TextStyle(
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    )),
+
+            ElevatedButton(
+                    onPressed: () {
+                      Get.to(() => WebViewScreen());
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.yellow,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                    ),
+                    // icon
+                    child: Row(
+                      children: [
+                        // icon
+                        const Icon(
+                          Icons.web,
+                        ),
+                        // space
+                        const SizedBox(width: 10),
+                        const Text(
+                          'WebView Button',
+                          style: TextStyle(
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    )),
             const SizedBox(height: 20),
             Container(
               decoration: BoxDecoration(
